@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:fitsSystemWindows="true"
+    android:orientation="vertical"
     tools:context=".view.MainActivity">
+
+    <include layout="@layout/layout_toolbar" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +26,7 @@
             android:padding="@dimen/paddingComponentLarge"
             android:textColor="@color/colorBlack"
             android:textSize="@dimen/textSizeLarge"
-            tools:ignore="NestedWeights,RtlHardcoded" />
+            tools:ignore="Autofill,LabelFor,NestedWeights,RtlHardcoded,TextFields" />
 
         <TextView
             android:id="@+id/tvResult"
@@ -32,10 +34,11 @@
             android:layout_height="wrap_content"
             android:gravity="right|end"
             android:padding="@dimen/paddingComponentLarge"
-            android:text="0.0"
+            android:text="@string/pointZero"
             android:textColor="@color/colorBlack"
             android:textSize="@dimen/textSizeResultLarge"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded" />
     </LinearLayout>
 
     <LinearLayout
@@ -50,7 +53,8 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:padding="@dimen/paddingComponent">
+            android:padding="@dimen/paddingComponent"
+            tools:ignore="NestedWeights">
 
             <Button
                 android:id="@+id/btnSeven"
@@ -59,7 +63,7 @@
                 android:layout_margin="@dimen/marginComponent"
                 android:layout_weight="1"
                 android:background="@drawable/bg_btn"
-                android:text="7"
+                android:text="@string/seven"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/textSizeLarge" />
 
@@ -70,7 +74,7 @@
                 android:layout_margin="@dimen/marginComponent"
                 android:layout_weight="1"
                 android:background="@drawable/bg_btn"
-                android:text="8"
+                android:text="@string/eight"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/textSizeLarge" />
 
@@ -81,7 +85,7 @@
                 android:layout_margin="@dimen/marginComponent"
                 android:layout_weight="1"
                 android:background="@drawable/bg_btn"
-                android:text="9"
+                android:text="@string/nine"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/textSizeLarge" />
 
@@ -122,7 +126,7 @@
                 android:layout_margin="@dimen/marginComponent"
                 android:layout_weight="1"
                 android:background="@drawable/bg_btn"
-                android:text="4"
+                android:text="@string/four"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/textSizeLarge" />
 
@@ -133,7 +137,7 @@
                 android:layout_margin="@dimen/marginComponent"
                 android:layout_weight="1"
                 android:background="@drawable/bg_btn"
-                android:text="5"
+                android:text="@string/five"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/textSizeLarge" />
 
@@ -145,7 +149,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_btn"
                 android:elevation="@dimen/elevationButton"
-                android:text="6"
+                android:text="@string/six"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/textSizeLarge" />
 
@@ -156,7 +160,7 @@
                 android:layout_margin="@dimen/marginComponent"
                 android:layout_weight="1"
                 android:background="@drawable/bg_btn"
-                android:text="*"
+                android:text="@string/multiption"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/textSizeLarge" />
 
@@ -186,7 +190,7 @@
                 android:layout_margin="@dimen/marginComponent"
                 android:layout_weight="1"
                 android:background="@drawable/bg_btn"
-                android:text="1"
+                android:text="@string/one"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/textSizeLarge" />
 
@@ -197,7 +201,7 @@
                 android:layout_margin="@dimen/marginComponent"
                 android:layout_weight="1"
                 android:background="@drawable/bg_btn"
-                android:text="2"
+                android:text="@string/two"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/textSizeLarge" />
 
@@ -208,7 +212,7 @@
                 android:layout_margin="@dimen/marginComponent"
                 android:layout_weight="1"
                 android:background="@drawable/bg_btn"
-                android:text="3"
+                android:text="@string/three"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/textSizeLarge" />
 
@@ -249,7 +253,7 @@
                 android:layout_margin="@dimen/marginComponent"
                 android:layout_weight="1"
                 android:background="@drawable/bg_btn"
-                android:text="0"
+                android:text="@string/zero"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/textSizeLarge" />
 

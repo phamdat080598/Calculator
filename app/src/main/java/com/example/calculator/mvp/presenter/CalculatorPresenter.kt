@@ -1,6 +1,5 @@
 package com.example.calculator.mvp.presenter
 
-import com.example.calculator.api.ApiService
 import com.example.calculator.api.ApiUtil
 import com.example.calculator.mvp.Presenter
 import com.example.calculator.mvp.View
@@ -33,14 +32,14 @@ class CalculatorPresenter : Presenter {
                             viewPresenter.getResultCalculatorSuccess(it.body()!!)
                         }
                         400 -> {
-                            viewPresenter.showError("Error : ${it.errorBody()!!.string()}")
+                            viewPresenter.showError(it.errorBody()!!.string())
                         }
                         else -> {
-                            viewPresenter.showError("Error Unknown")
+                            viewPresenter.showError("Error Unknown ")
                         }
                     }
                 }, {
-                    viewPresenter.showError("Error Unknown")
+                    viewPresenter.showError("Error Unknown (please check for internet)" )
                 }
             )
         )
